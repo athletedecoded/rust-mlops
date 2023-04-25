@@ -10,6 +10,9 @@ Project Portfolio for IDS721 Spring 2023 at Duke University by [@athletedecoded]
 
 **Project 3:** [Automated Serverless S3 Backup](https://github.com/athletedecoded/s3-backup)
 
+**Project 4:** [Image Compression for Big Data with AWS EFS](https://github.com/athletedecoded/img-compress)
+
+
 ## Weekly Projects
 
 | Week  | Project                            | What I learnt                         |
