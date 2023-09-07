@@ -12,6 +12,8 @@ Project Portfolio for IDS721 Spring 2023 at Duke University by [@athletedecoded]
 
 **Project 4:** [Image Compression for Big Data with AWS EFS](https://github.com/athletedecoded/img-compress)
 
+**Final Project:** [Rusty Pipe -- E2E ML Pipeline](https://github.com/athletedecoded/rusty-pipe)
+
 
 ## Weekly Projects
 
