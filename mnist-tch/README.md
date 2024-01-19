@@ -2,7 +2,6 @@
 
 Runs training on basic CNN classifier for MNIST dataset
 
-
 ## Useage
 
 ```

@@ -24,15 +24,13 @@ enum Commands {
 fn main() {
     let args = Cli::parse();
     match args.command {
-        Some(Commands::Calc { a, b, op }) => {
-            match op.as_str() {
-                "+" => println!("Result: {:.2}", calculator::add(a,b)),
-                "-" => println!("Result: {:.2}", calculator::subtract(a,b)),
-                "x" => println!("Result: {:.2}", calculator::multiply(a,b)),
-                "/" => println!("Result: {:.2}", calculator::divide(a,b)),
-                _ => println!("Invalid operation"),
-            }
-        }
+        Some(Commands::Calc { a, b, op }) => match op.as_str() {
+            "+" => println!("Result: {:.2}", calculator::add(a, b)),
+            "-" => println!("Result: {:.2}", calculator::subtract(a, b)),
+            "x" => println!("Result: {:.2}", calculator::multiply(a, b)),
+            "/" => println!("Result: {:.2}", calculator::divide(a, b)),
+            _ => println!("Invalid operation"),
+        },
         None => println!("No command given"),
     }
 }

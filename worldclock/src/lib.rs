@@ -22,6 +22,6 @@ pub fn get_time(tz_code: &str) -> String {
         now.minute(),
         now.second(),
         if is_pm { "PM" } else { "AM" },
-        if tz_str == "UTC" {tz_str} else {tz_code}
+        if tz_str == "UTC" { tz_str } else { tz_code }
     )
 }

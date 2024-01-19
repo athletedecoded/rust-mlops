@@ -30,7 +30,7 @@ enum Commands {
     #[clap(version = "1.0", author = "Kahlia Hogg")]
     Image {
         #[clap(short, long)]
-        name: String
+        name: String,
     },
 }
 
@@ -58,7 +58,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Classify an image
     let args = Cli::parse();
     match args.command {
-        Some(Commands::Image { name  }) => {
+        Some(Commands::Image { name }) => {
             let f_str = format!("./models/inputs/{}.png", name);
             let fname = f_str.to_handle(&ctx)?;
             let buf = raw_ops::read_file(&ctx, &fname)?;
@@ -112,7 +112,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             let label = tf_rust::get_label(&max_idx.to_string());
             println!("Prediction = {}: {}", max_idx, label);
         }
-        None => println!("No command given")
+        None => println!("No command given"),
     }
     Ok(())
 }

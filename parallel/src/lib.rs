@@ -15,7 +15,7 @@ pub fn walk(path: &str) -> Result<Vec<String>, Box<dyn Error>> {
     Ok(files)
 }
 
-pub fn run_parallel(path:&str) {
+pub fn run_parallel(path: &str) {
     let files = walk(path).unwrap();
     let checksums = checksum_par(files).unwrap();
     for (checksum, files) in checksums {
@@ -28,7 +28,7 @@ pub fn run_parallel(path:&str) {
     }
 }
 
-pub fn run_serial(path:&str) {
+pub fn run_serial(path: &str) {
     let files = walk(path).unwrap();
     let checksums = checksum(files).unwrap();
     for (checksum, files) in checksums {

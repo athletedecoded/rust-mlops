@@ -1,9 +1,9 @@
 use image::imageops::FilterType;
 use image::ImageFormat;
+use rayon::prelude::*;
 use std::fmt;
 use std::fs::File;
 use std::time::{Duration, Instant};
-use rayon::prelude::*;
 
 struct Elapsed(Duration);
 
@@ -38,13 +38,15 @@ fn main() {
     ];
     // Parallelize over the augmentations
     let timer = Instant::now();
-    augmentations.par_iter().for_each(|(augmentation, fxn)|
-    {
+    augmentations.par_iter().for_each(|(augmentation, fxn)| {
         let aug_img = fxn;
         let mut output = File::create(format!("assets/img-{}.png", augmentation)).unwrap();
         aug_img.write_to(&mut output, ImageFormat::Png).unwrap();
     });
-    println!("Parallel augmentations completed in {}", Elapsed::from(&timer));
+    println!(
+        "Parallel augmentations completed in {}",
+        Elapsed::from(&timer)
+    );
 
     // Serial walk over the augmentations
     // let timer = Instant::now();
