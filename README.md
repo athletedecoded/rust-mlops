@@ -2,7 +2,7 @@
 
 [![Rust CI/CD Pipeline](https://github.com/athletedecoded/rust-mlops/actions/workflows/CICD.yml/badge.svg)](https://github.com/athletedecoded/rust-mlops/actions/workflows/CICD.yml)
 
-Rust for MLOps & Data Engineering projects at Duke Univeristy with [Noah Gift](https://github.com/noahgift).
+Rust for MLOps & Data Engineering projects at Duke Univeristy.
 
 ## Individual Projects
 
